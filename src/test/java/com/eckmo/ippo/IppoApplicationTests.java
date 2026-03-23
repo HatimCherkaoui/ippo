@@ -1,16 +1,12 @@
 package com.eckmo.ippo;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * Full integration test — requires a running PostgreSQL instance.
- * Run with a real DB or use Testcontainers to enable this test.
+ * Smoke test — verifies the Spring application context loads successfully
+ * against a real PostgreSQL instance managed by Testcontainers.
  */
-@SpringBootTest
-@Disabled("Requires PostgreSQL — enable when a database is available")
-class IppoApplicationTests {
+class IppoApplicationTests extends AbstractIntegrationTest {
 
     @Test
     void contextLoads() {
